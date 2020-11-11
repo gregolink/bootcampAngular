@@ -1,0 +1,17 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Busqueda</mat-label>
+    <input
+      matInput
+      name="queryName"
+      [(ngModel)]="query"
+      placeholder="Query a ejecutar"
+    />
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <mat-label>Query a ejecutar {{ query }}</mat-label>
+  <mat-divider></mat-divider>
+  <button mat-raised-button color="primary" (click)="sendQuery()">
+    {{ buttonName }}
+  </button>
+</form>

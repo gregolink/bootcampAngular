@@ -1,0 +1,21 @@
+<!--<app-drop-down-list
+  [itemList]="myColorArray"
+  (selectedItem)="getSelectedColor($event)"
+></app-drop-down-list>
+
+<div>Color seleccionado es: {{ selectedItem }}</div>
+
+<app-drop-down-list
+  [itemList]="myCityArray"
+  (selectedItem)="getSelectedCity($event)"
+></app-drop-down-list>
+
+<div>Ciudad seleccionada es: {{ selectedCityItem }}</div>-->
+
+<app-search buttonName="Send" (queryEmitter)="getQuery($event)"></app-search>
+
+<div>
+  <h3>La query ejecutada es: {{ execQuery }}</h3>
+</div>
+
+<app-employer-table [employerData]="employerData"></app-employer-table>
