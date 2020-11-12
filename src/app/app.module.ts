@@ -23,6 +23,8 @@ import { TableemployerComponent } from './features/tableemployer/tableemployer.c
 import { CreateEmployerComponent } from './features/create-employer/create-employer.component';
 import { EditEmployerComponent } from './features/edit-employer/edit-employer.component';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
+import { HomeComponent } from './components/home/home.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     CreateEmployerComponent,
     EditEmployerComponent,
     EditFormComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { EditFormComponent } from './components/edit-form/edit-form.component';
     MatDividerModule,
     HttpClientModule,
     MatTableModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -38,6 +38,19 @@ export class EmployersService {
         })
       );
   }
+  public updateEmployee(id): Observable<any>{
+    return this.http
+      .put(
+        `http://dummy.restapiexample.com/api/v1/update/${id}`,
+        JSON.stringify(id)
+      )
+      .pipe(
+        map((res) => res),
+        catchError((err) => {
+          return err;
+        })
+      );
+  }
 
   mapInterfaceToEmployeeObject(
     employerCollection: Employer[]

@@ -20,16 +20,27 @@
 
 <app-employer-table [employerData]="employerData"></app-employer-table>
 <app-form-owner (formValue)="getFormValue($event)"></app-form-owner>-->
-<ul>
-  <li>
-    <a [routerLink]="['/create']" routerLinkActive="router-link-active"
-      >Crear</a
-    >
-  </li>
-  <li>
-    <a [routerLink]="['/view']" routerLinkActive="router-link-active"
-      >Ver empleados</a
-    >
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Myapp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item mr-2">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active">Home </a>
+            </li>
+            <li class="nav-item mr-2">
+                <a [routerLink]="['/create']" routerLinkActive="router-link-active">Crear Empleado </a>
+            </li>
+            <li class="nav-item mr-2">
+                <a [routerLink]="['/view']" routerLinkActive="router-link-active">Visualizar empleados </a>
+            </li>
+            <li class="nav-item mr-2">
+                <a [routerLink]="['/edit']" routerLinkActive="router-link-active">Editar empleado </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <router-outlet></router-outlet>
