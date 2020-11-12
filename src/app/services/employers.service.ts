@@ -26,10 +26,17 @@ export class EmployersService {
   }
 
   public createEmployee(body): Observable<any> {
-    return this.http.post(
-      '	http://dummy.restapiexample.com/api/v1/create',
-      body
-    );
+    return this.http
+      .post(
+        'http://dummy.restapiexample.com/api/v1/create',
+        JSON.stringify(body)
+      )
+      .pipe(
+        map((res) => res),
+        catchError((err) => {
+          return err;
+        })
+      );
   }
 
   mapInterfaceToEmployeeObject(

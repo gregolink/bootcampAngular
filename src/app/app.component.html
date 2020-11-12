@@ -12,10 +12,24 @@
 
 <div>Ciudad seleccionada es: {{ selectedCityItem }}</div>-->
 
-<app-search buttonName="Send" (queryEmitter)="getQuery($event)"></app-search>
+<!--<app-search buttonName="Send" (queryEmitter)="getQuery($event)"></app-search>
 
 <div>
   <h3>La query ejecutada es: {{ execQuery }}</h3>
 </div>
 
 <app-employer-table [employerData]="employerData"></app-employer-table>
+<app-form-owner (formValue)="getFormValue($event)"></app-form-owner>-->
+<ul>
+  <li>
+    <a [routerLink]="['/create']" routerLinkActive="router-link-active"
+      >Crear</a
+    >
+  </li>
+  <li>
+    <a [routerLink]="['/view']" routerLinkActive="router-link-active"
+      >Ver empleados</a
+    >
+  </li>
+</ul>
+<router-outlet></router-outlet>

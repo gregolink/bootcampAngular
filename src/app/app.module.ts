@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +18,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
+import { FormOwnerComponent } from './components/form-owner/form-owner.component';
+import { TableemployerComponent } from './features/tableemployer/tableemployer.component';
+import { CreateEmployerComponent } from './features/create-employer/create-employer.component';
+import { EditEmployerComponent } from './features/edit-employer/edit-employer.component';
+import { EditFormComponent } from './components/edit-form/edit-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +30,16 @@ import { MatTableModule } from '@angular/material/table';
     DropDownListComponent,
     SearchComponent,
     EmployerTableComponent,
+    FormOwnerComponent,
+    TableemployerComponent,
+    CreateEmployerComponent,
+    EditEmployerComponent,
+    EditFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,
     MatSelectModule,
